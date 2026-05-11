@@ -243,19 +243,19 @@ public abstract class SequentiallyThinkingScreenModel extends ScreenModel {
     }
     
     public boolean isbLeft() {
-		return bLeft && Constants.IS_ANDROID;
+		return bLeft && Constants.IS_MOBILE;
 	}
 
 	public boolean isbUp() {
-		return bUp && Constants.IS_ANDROID;
+		return bUp && Constants.IS_MOBILE;
 	}
 
 	public boolean isbDown() {
-		return bDown && Constants.IS_ANDROID;
+		return bDown && Constants.IS_MOBILE;
 	}
 
 	public boolean isbRight() {
-		return bRight && Constants.IS_ANDROID;
+		return bRight && Constants.IS_MOBILE;
 	}
 	
 	private void resetDirection() {
@@ -294,7 +294,7 @@ public abstract class SequentiallyThinkingScreenModel extends ScreenModel {
                 break;
             }
         }
-        if (Constants.IS_ANDROID) {
+        if (Constants.IS_MOBILE) {
         	if ((x > dPadX) && (x < dPadX + 30 * getScale()) &&
         		(y > dPadY + 22 * getScale()) && (y < dPadY + 52 * getScale())) {
         		bLeft = true;
@@ -323,7 +323,7 @@ public abstract class SequentiallyThinkingScreenModel extends ScreenModel {
     }
 	
 	public void renderDPad() {
-		if ((Constants.IS_ANDROID) && (state != STATE_MENU)) {
+		if ((Constants.IS_MOBILE) && (state != STATE_MENU)) {
 			getMainPanel().spriteBatch.begin();
 	        getMainPanel().spriteBatch.enableBlending();
 	        getMainPanel().spriteBatch.draw(AssetLoader.dpad, dPadX, dPadY, AssetLoader.dpad.getRegionWidth() * getScale(), AssetLoader.dpad.getRegionHeight() * getScale());

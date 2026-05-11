@@ -8,10 +8,10 @@ i:b:/fonts/frutiger30.fnt:34305:1
 i:b:/fonts/frutiger30.png:36198:1
 i:b:/fonts/frutiger40.fnt:34842:1
 i:b:/fonts/frutiger40.png:50203:1
-i:b:/i18n/love.properties:1891:1
-i:b:/i18n/love_de.properties:2376:1
-i:b:/i18n/love_en.properties:1891:1
-i:b:/mirror_26.png:49689:1
+i:b:/i18n/love.properties:2072:1
+i:b:/i18n/love_de.properties:2624:1
+i:b:/i18n/love_en.properties:2072:1
+i:b:/mirror_26.png:57673:1
 c:b:/com/badlogic/gdx/utils/lsans-15.png:10270:1
 c:b:/com/badlogic/gdx/graphics/g3d/shaders/default.vertex.glsl:9096:1
 c:b:/com/badlogic/gdx/graphics/g3d/particles/particles.fragment.glsl:820:1

@@ -134,6 +134,72 @@ public class LoveLevels {
             "tttttttttttttttttttt#";
 	
     public static final String[] LEVELS = new String[] {
+					"...ttttt...tttttt..." +
+					"tttttttttttttttttttt" +
+					"tttttttttttttttttttt" +
+					"tttttttttytttttttttt" +
+					"~tttttttt.tttttttttt" +
+					"~~ttttt...tttttttttt" +
+					"~~ttttttttttttttttt." +
+					"~~~tttt.p.tttttttt.." +
+					"~~~tttt...tttttt.hf." +
+					"~~~~ttttttttttt....." +
+					"                    " +
+					"iiii.......****....." +
+					"iiii...u....****..s." +
+					"iii.........*****..." +
+					"ii.w.bbb.aaa.******." +
+					"i.ww...b...a..******" +
+					".w.w.bbb..aa...*****" +
+					"...w.b.....a.l...***" +
+					"...w.b.....a......**" +
+					"...w.bbb.aaa......**" +
+					"#WOMAN,0,0,IS,1,0,GOAL,2,0,HERO,17,0,IS,18,0,YOU,19,0,#",
+
+					"...ttttt...tttttt..." +
+					"tttttttttttttttttttt" +
+					"tttttttttttttttttttt" +
+					"tttttttttttttttttttt" +
+					"~ttttttttytttttttttt" +
+					"~~ttttt...tttttttttt" +
+					"~~ttttt.ttttttttttt." +
+					"~~~tttt.pttttttttt.." +
+					"~~~ttttttttttttt.hf." +
+					"~~~~ttttttttttt....." +
+					"                    " +
+					"iiii.......****....." +
+					"iiii...u....****..s." +
+					"iii.........*****..." +
+					"ii.w.bbb.aaa.******." +
+					"i.ww...b...a..******" +
+					".w.w.bbb..aa...*****" +
+					"...w.b.....a.l...***" +
+					"...w.b.....a......**" +
+					"...w.bbb.aaa......**" +
+					"#WOMAN,0,0,IS,1,0,GOAL,2,0,TREE,8,0,IS,9,0,SOLID,10,0,HERO,17,0,IS,18,0,YOU,19,0,#",
+
+					"...ttttt...tttttt..." +
+					"tttttttttttttttttttt" +
+					"tt..y...ttttttttttt." +
+					"ttt......tttttttttt." +
+					"~tt.......ttttttttt." +
+					"~~tt.....ttttttttttt" +
+					"~~tttttlttttttttttt." +
+					"~~~tttt.pttttttttt.." +
+					"~~~ttttttttttttt.hf." +
+					"~~~~ttttttttttt....." +
+					"                    " +
+					"iiii.......****....." +
+					"iiii...u....****..s." +
+					"iii.........*****..." +
+					"ii.w.bbb.aaa.******." +
+					"i.ww...b...a..******" +
+					".w.w.bbb..aa...*****" +
+					"...w.b.....a.l...***" +
+					"...w.b.....a......**" +
+					"...w.bbb.aaa......**" +
+					"#WOMAN,0,0,IS,1,0,GOAL,2,0,TREE,8,0,IS,9,0,SOLID,10,0,HERO,17,0,IS,18,0,YOU,19,0,PADLOCK,19,2,IS,6,3,IS,19,3,HERO,5,4,KEY,7,4,LOCK,19,4,#",
+
 					".TTT.TTT....TTT.TTT." +
 					"~~~~~~~~~~~~~~~~~~~~" +
 					"~~~~~hhhh~hhhh~~~~~~" +

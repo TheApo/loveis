@@ -491,7 +491,7 @@ public class LoveGame extends SequentiallyThinkingScreenModel {
 	    		float x = (WIDTH / 4f * SCALE) / 2f;
 	    		float y = TILE_SIZE * 19.8f * SCALE;
 	    		
-	    		renderBackground(x, y + 2 * SCALE, WIDTH * 3 / 4f * SCALE, 3 * SCALE * TILE_SIZE - 7 * SCALE, 0.75f);
+	    		renderBackground(x, y + 2 * SCALE - 5, WIDTH * 3 / 4f * SCALE, 3 * SCALE * TILE_SIZE - 7 * SCALE + 5, 0.75f);
 	
 	    		screen.spriteBatch.begin();
 	    		String[] moveText = Localization.getInstance().getLines("tutorial_0_move_text");
@@ -500,12 +500,13 @@ public class LoveGame extends SequentiallyThinkingScreenModel {
 	    		}
 	    		screen.spriteBatch.end();
 	    	}
-			if ((!level.isNoYou()) && (curLevel >= 0) && (curLevel < 20)) {
+			if ((!level.isNoYou()) && (curLevel >= 0) && (curLevel < 23)) {
 			String[] tutorialText = Localization.getInstance().getLines("tutorial_text_" + curLevel);
 			if (tutorialText[0].length() > 0) {
 	    		int size = tutorialText.length;
+	    		float singleLineOffset = (size == 1) ? -TILE_SIZE * SCALE / 2f : 0f;
 	    		float x = (WIDTH / 3f * SCALE) / 2f;
-	    		float y = HEIGHT * SCALE - TILE_SIZE * size * SCALE + (size) * SCALE;
+	    		float y = HEIGHT * SCALE - TILE_SIZE * size * SCALE + (size) * SCALE + singleLineOffset;
 	    		renderBackground(x, y, WIDTH * 2 / 3f * SCALE,  (size) * SCALE * TILE_SIZE - 3 * size * SCALE, 0.75f);
 
 	    		screen.spriteBatch.begin();
@@ -515,8 +516,45 @@ public class LoveGame extends SequentiallyThinkingScreenModel {
 	    		screen.spriteBatch.end();
 	    	}
 	    	}
+    		renderTutorialArrows();
     	}
 		renderNoYou(screen);
+    }
+
+    private static final int ARROW_UP = 0;
+    private static final int ARROW_LEFT = 1;
+
+    private void renderTutorialArrows() {
+    	float t = TILE_SIZE * SCALE;
+    	float topY = 3 * t;
+    	float gap = 4;
+    	if (curLevel == 0) {
+    		renderArrow(1 * t + t / 2f,  topY + t + gap, ARROW_UP);
+    		renderArrow(18 * t + t / 2f, topY + t + gap, ARROW_UP);
+    	} else if (curLevel == 1) {
+    		renderArrow(9 * t + t / 2f, topY + t + gap, ARROW_UP);
+    	} else if (curLevel == 2) {
+    		renderArrow(7 * t + t + gap, topY + 4 * t + t / 2f, ARROW_LEFT);
+    	}
+    }
+
+    private void renderArrow(float tipX, float tipY, int direction) {
+    	float t = TILE_SIZE * SCALE;
+    	float bw = 0.4f * t;
+    	float bl = 0.9f * t;
+
+    	Gdx.graphics.getGL20().glEnable(GL20.GL_BLEND);
+    	this.getMainPanel().getRenderer().begin(ShapeType.Filled);
+    	this.getMainPanel().getRenderer().setColor(COLOR_BUTTON_BRIGHT[0], COLOR_BUTTON_BRIGHT[1], COLOR_BUTTON_BRIGHT[2], 1f);
+    	if (direction == ARROW_UP) {
+    		this.getMainPanel().getRenderer().triangle(tipX, tipY, tipX - t / 2f, tipY + t, tipX + t / 2f, tipY + t);
+    		this.getMainPanel().getRenderer().rect(tipX - bw / 2f, tipY + t, bw, bl);
+    	} else if (direction == ARROW_LEFT) {
+    		this.getMainPanel().getRenderer().triangle(tipX, tipY, tipX + t, tipY - t / 2f, tipX + t, tipY + t / 2f);
+    		this.getMainPanel().getRenderer().rect(tipX + t, tipY - bw / 2f, bl, bw);
+    	}
+    	this.getMainPanel().getRenderer().end();
+    	Gdx.graphics.getGL20().glDisable(GL20.GL_BLEND);
     }
 
 	private void renderNoYou(GameScreen screen) {

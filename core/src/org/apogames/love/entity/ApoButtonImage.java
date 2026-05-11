@@ -28,7 +28,7 @@ public class ApoButtonImage extends ApoButton {
 	public void renderOutline(GameScreen screen, int changeX, int changeY) {
 		if ( this.isVisible() ) {
 			screen.getRenderer().begin(ShapeType.Line);
-			screen.getRenderer().setColor(0f, 44f/255f, 99f/255f, 1f);
+			screen.getRenderer().setColor(108f / 255f, 43f/255f, 37f/255f, 1f);
 			if (( this.isBPressed() )) {
 				screen.getRenderer().setColor(255f/ 255.0f, 0f / 255.0f, 0f / 255.0f, 1f);
 			} else if ( this.isBOver() ) {

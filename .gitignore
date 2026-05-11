@@ -127,3 +127,5 @@ Thumbs.db
 php/
 
 .claude/
+
+teavm/build/

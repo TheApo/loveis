@@ -3,7 +3,7 @@
 **A puzzle game where *you* write the rules.**
 Push the words around the board, build the laws of physics on the fly, and reunite the hero with their love. Inspired by *Baba Is You*, then taken further with new mechanics, a built-in level editor, and a growing library of community-made levels.
 
-🎮 Play it on the web: **<https://www.apo-games.de/love/>**
+🎮 Play it on the web: **<https://theapo.github.io/loveis/>**
 
 ---
 
@@ -59,7 +59,7 @@ Combine freely. `IF HERO ISON STAR THEN WALL IS YOU` is a perfectly valid thing 
 
 | Platform | How |
 |---|---|
-| **Web** | Open <https://www.apo-games.de/love/> — runs in any modern browser, including mobile (compiled with TeaVM, no plugins) |
+| **Web** | Open <https://theapo.github.io/loveis/> — runs in any modern browser, including mobile (compiled with TeaVM, no plugins) |
 | **Android** | Native build from the `android/` module |
 | **Desktop** | Run the `desktop/` module on Windows, macOS or Linux (LWJGL3) |
 
